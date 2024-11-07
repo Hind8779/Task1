@@ -10,14 +10,14 @@ import java.util.List;
 
 public class DashboardPage extends CommonMethods {
     //Hide or show button
-    @FindBy(className = "sidebar open")
+    @FindBy(css =".sidebar.open")
     public WebElement pimButton;
     //propertyManagementLink
-    @FindBy(css = "a[href='/aqar']")
+    @FindBy(css ="a[href='/aqar']")
     public WebElement propertyManagementLink;
 
     //propertyManagementLink
-    @FindBy(css = "a[href='/amlak']")
+    @FindBy(css ="a[href='/amlak']")
     public WebElement addEmployeeButton;
 
     //add property button

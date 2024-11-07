@@ -18,8 +18,10 @@ public class CommonMethods extends PageInitializers {
     public static WebDriver driver;
 
     public static void openBrowserAndLaunchApplication() {
+
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+        WebDriver  driver = new ChromeDriver();
 
         ConfigReader.readProperties(Constants.CONFIGURATION_PATH);
         switch (ConfigReader.getPropertyValue("browser")) {

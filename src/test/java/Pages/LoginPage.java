@@ -8,21 +8,21 @@ import utils.CommonMethods;
 
 public class LoginPage extends CommonMethods {
 
-        @FindBy(xpath = "//input[@type='email']")
+        @FindBy(xpath ="//input[@type='email']")
         public WebElement userEmailField;
 
-        @FindBy(xpath = "//input[@placeholder='ادخل كلمة المرور الخاصة بك']")
+        @FindBy(xpath ="//input[@placeholder='ادخل كلمة المرور الخاصة بك']")
         public WebElement passwordField;
 
-        @FindBy(className = "btn-green login-btn ")
+        @FindBy(css =".btn-green.login-btn")
         public WebElement loginButton;
 
-        @FindBy(xpath = "//span[@id='spanMessage']")
+        @FindBy(xpath ="//span[@id='spanMessage']")
         public WebElement actualErrorMsg;
 
 
-        @FindBy(id = "errorMessage")
-        private WebElement errorMessageElement;
+        @FindBy(id ="errorMessage")
+        public WebElement errorMessageElement;
 
         public LoginPage() {
             PageFactory.initElements(driver, this);
